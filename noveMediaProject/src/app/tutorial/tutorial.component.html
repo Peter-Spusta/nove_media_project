@@ -1,0 +1,30 @@
+<div class="questionPage">
+  <div class="questionBox">
+
+    <div class="question">
+      <div *ngIf = 'question.type === "select"'>
+        <p>{{question.question}}</p>
+        <select id="select" placeholder="select" (change)="answerChoosed()">
+          <option *ngFor='let option of question.options' value=option.id>{{option.text}}</option>
+        </select>
+      </div> 
+
+      <div *ngIf = 'question.type === "bool"' (change)="answerChoosed()">
+        <p>{{question.question}}</p>
+        <input type="checkbox" id="checkTrue" value="1">
+        <label> True</label><br>
+        <input type="checkbox" id="checkTrue" value="0">
+        <label> false</label><br>
+      </div> 
+      
+      <div *ngIf = 'question.type === "text"'>
+        <p>{{question.question}}</p>
+        <label>Answer:</label>
+        <input type="text" id="answer" (change)="answerChoosed()">
+      </div> 
+    </div>
+    <button class="nextButton" *ngIf="answered" (click)="nextQuestion()">
+      Next
+    </button>
+  </div>
+</div>

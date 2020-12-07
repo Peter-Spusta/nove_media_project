@@ -1,0 +1,28 @@
+.questionPage {
+    height: 100%;
+}
+
+.questionBox {
+    position: absolute;
+    left: 50%;
+    top: 20%;  
+    transform: translate(-50%, -50%);
+    padding-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 100px;
+    background-color: darkgrey;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.question {
+    align-self: center;
+}
+
+.nextButton {
+    height:30px;
+    width:100px;
+}
